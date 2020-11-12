@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<html>
+
+<body>
+    <header>
+        <h1>CV</h1>
+
+        <h2>Știrb Stanca Maria</h2>
+        <img src="IMG_20200811_185715[1].jpg" width="100" alt="Stanca">
+
+        <p id="job-title" style="color:blue; text-align : right ; ">invat HTML CSS si Java Script</p>
+
+        <ul id="top-menu-bar">
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="#" onclick="showSkills()"> Skills</a></li>
+            <li><a href="#" onclick="showProjects()">Projects</a></li>
+            <li><a href="#" onclick="showLanguages()">Languages</a></li>
+        </ul>
+    </header>
+
+    <section id="content">
+        <div id="side-menu">
+            <section>
+                <form action="">
+                    <label for="e">Email</label>
+                    <input type="email" id="e" name="em">
+                    <input type="text" id="e" name="em" placeholder="Your name">
+                    <button>
+                        Contact Us
+                    </button>
+                </form>
+            </section>
+            <section>...</section>
+        </div>
+
+        <div id="main">
+
+            <div id="home" class="page">
+                <h2>Home</h2>
+                Bine ai venit.Aici poate este despre mine....
+                dar poate si despre tine.
+            </div>
+
+            <div id="skills" class="page" style="display: none;">
+                <h2>Skills & Endorcements</h2>
+                <ul>
+                    <li class="favorite">HTML</li>
+                    <li>CSS</li>
+                    <li class="favorite">Java Scirpt</li>
+                </ul>
+            </div>
+
+            <div id="projects" class="page" style="display: none;">
+                <h2>Projects</h2>
+                multe....iti zic dupa
+            </div>
+
+
+            <div id="languages" class="page" style="display: none;">
+                <h2>Known Languages</h2>
+                <table border="1">
+                    <tr>
+                        <td>Romana </td>
+                        <td>nativ</td>
+                    </tr>
+                    <tr>
+                        <td>Engleza </td>
+                        <td>avansat</td>
+                    </tr>
+                    <tr>
+                        <td>Coreena </td>
+                        <td>putin</td>
+                    </tr>
+                    <tr>
+                        <td>Spaniola </td>
+                        <td>putin</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+
+    </section>
+    <footer>
+        <a target="_blanc" href="https://fasttrackit.org/">Curs IT</a>
+    </footer>
+</body>
+
+<script src="functions.js"></script>
+
+<script>
+        // console.info(2 + 4)
+        // var name = 'Stanca Stirb';
+        // console.info(name);
+        // var skills = ["html", "css", "js"];
+        // console.info(skills);
+</script>
+
+</body>
+
+</html>
