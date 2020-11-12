@@ -9,30 +9,29 @@ function hide(id) {
     }
 }
 
-function showHome() {
+function hideAllPages() {
+    hide("home")
     hide("skills");
     hide("projects");
     hide("languages");
+} 
+
+function showHome() {
+    hideAllPages();
     document.getElementById('home').style.display = '';
 }
 
 function showSkills() {
-    hide("home");
-    hide("projects");
-    hide("languages");
+    hideAllPages();
     document.getElementById('skills').style.display = '';
 }
 
 function showProjects() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("skills").style.display = "none";
-    document.getElementById("languages").style.display = "none";
+    hideAllPages();
     document.getElementById("projects").style.display = "";
 }
 
 function showLanguages() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("skills").style.display = "none";
-    document.getElementById("projects").style.display = "none";
+    hideAllPages();
     document.getElementById("languages").style.display = "";
 }
