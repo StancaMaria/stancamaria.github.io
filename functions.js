@@ -1,7 +1,5 @@
 function hide(id) {
-    //document.getElementById(id).style.display = "none";
     var el = document.getElementById(id);
-    console.info("hide:" + id, el);
     if (el) {
         el.style.display = "none";
     } else {
@@ -10,28 +8,36 @@ function hide(id) {
 }
 
 function hideAllPages() {
-    hide("home")
-    hide("skills");
-    hide("projects");
-    hide("languages");
-} 
-
-function showHome() {
-    hideAllPages();
-    document.getElementById('home').style.display = '';
+    var pages = document.querySelectorAll(".page");
+    for(var i = 0; i < pages.length; i++) {
+        var page = pages[i];
+        var id = page.id;
+        hide(id);
+    }
 }
 
-function showSkills() {
+function showPage(pageId) {
     hideAllPages();
-    document.getElementById('skills').style.display = '';
+    document.getElementById(pageId).style.display = "";
 }
 
-function showProjects() {
-    hideAllPages();
-    document.getElementById("projects").style.display = "";
+function initMenu() {
+    console.warn('prepare click on links');
+    document.addEventListener("click", function (e) {
+        var link = e.target;
+        if (e.target.matches("#top-menu-bar a")) {
+            var id = link.innerHTML.toLowerCase();
+            showPage(id);
+        }
+    })
 }
 
-function showLanguages() {
-    hideAllPages();
-    document.getElementById("languages").style.display = "";
-}
+initMenu();
+
+document.addEventListener("click", function (e) {
+    var link = e.target;
+    if (e.target.matches("#top-menu-bar a")) {
+        var id = link.innerHTML.toLowerCase();
+        console.warn('aici',id)
+    }
+})
