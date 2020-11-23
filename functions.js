@@ -42,6 +42,7 @@ var skills = [
     { name: "CSS", endorsements: 5 }, 
     { name: "JS", endorsements: 22 }
 ];
+function showSkills(skills){
 var skillsLi = skills.map(function (skill) {
     var endosements = ` <span>&middot; ${skill.endorsements}</span>`;
     return "<li>" + skill.name + endosements + "</li>";
@@ -50,3 +51,6 @@ var skillsLi = skills.map(function (skill) {
 // TODO add "favorite" skill
 var ul = document.querySelector("#skills ul");
 ul.innerHTML = skillsLi.join("");
+}
+
+showSkills([]);
