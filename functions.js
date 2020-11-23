@@ -40,7 +40,7 @@ showPage(activePage);
 var skills = [
     { name: "HTML", endorsements: 15 },
     { name: "CSS", endorsements: 5 }, 
-    { name: "JS", endorsements: 25 }
+    { name: "JS", endorsements: 22 }
 ];
 var skillsLi = skills.map(function (skill) {
     var endosements = ` <span>&middot; ${skill.endorsements}</span>`;
