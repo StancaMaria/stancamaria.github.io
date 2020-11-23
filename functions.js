@@ -38,7 +38,7 @@ initMenu();
 showPage(activePage);
 
 var skills = [
-    "HTML (15)",
+    "HTML ("+ 16 + ")",
     "CSS (5)", 
     "JS (20)"
 ];
