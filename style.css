@@ -121,7 +121,11 @@ body {
 }
 
 li {
-    color: #334455; 
+    color: black; 
+}
+
+#skills li span{
+    color: rgb(185, 182, 182);
 }
 
 .favorite {

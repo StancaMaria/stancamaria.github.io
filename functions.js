@@ -38,12 +38,13 @@ initMenu();
 showPage(activePage);
 
 var skills = [
-    "HTML ("+ 16 + ")",
-    "CSS (5)", 
-    "JS (20)"
+    { name: "HTML", endorsements: 15 },
+    { name: "CSS", endorsements: 5 }, 
+    { name: "JS", endorsements: 25 }
 ];
-var skillsLi = skills.map(function(skill){
-    return "<li>" + skill + "</li>";
+var skillsLi = skills.map(function (skill) {
+    var endosements = ` <span>&middot; ${skill.endorsements}</span>`;
+    return "<li>" + skill.name + endosements + "</li>";
 });
 
 // TODO add "favorite" skill
