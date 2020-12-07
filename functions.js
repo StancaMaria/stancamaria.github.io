@@ -40,7 +40,9 @@ showPage(activePage);
 function getHTMLSlills(skills) {
     var skillsLi = skills.map(function(skill){
         var endorsements = ` <span>&middot; ${skill.endorsements}</span>`;
-        return "<li>" + skill.name + endorsements + "</li>";
+        return `<li class="${skill.endorcements > 9 ? "favorite" : ""}"> 
+        ${skill.name} ${endorsements} 
+        </li>`;
     });
     return skillsLi.join("")
 }
