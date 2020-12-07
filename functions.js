@@ -37,27 +37,31 @@ initMenu();
 
 showPage(activePage);
 
-function getHTMLSlills(skills) {
+function getHTMLSkills(skills) {
     var skillsLi = skills.map(function(skill){
-        var endorsements = ` <span>&middot; ${skill.endorsements}</span>`;
-        return `<li class="${skill.endorcements > 9 ? "favorite" : ""}"> 
-        ${skill.name} ${endorsements} 
+        return `<li class="${skill.endorsements > 9 ? "favorite" : ""}">
+            ${skill.name} <span>&middot; ${skill.endorsements}</span>
         </li>`;
     });
-    return skillsLi.join("")
+    return skillsLi.join("");
 }
 
 function showSkills(skills) {
-   var html = getHTMLSlills(skills);
-    
-    // TODO add "favorite" skill
-    //TODO
+    var html = getHTMLSkills(skills);
+
+    // TODO sort by endorsements
     var ul = document.querySelector("#skills ul");
     ul.innerHTML = html;
 }
 
 fetch("data/skills.json").then(function(r) {
     return r.json();
-}).then(function(allSkills) {
+}).then(function (allSkills) {
+    allSkills.sort(function (s1, s2) {
+        return s2.endorsements - s1.endorsements;
+    });
+
     showSkills(allSkills);
 });
+
+// TODO intro in es6
